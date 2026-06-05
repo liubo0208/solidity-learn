@@ -15,13 +15,9 @@ contract PracticeContract {
 
         uint len = inputs.length;
 
-        uint256[] memory temp = new uint256[](len);
         for (uint i = 0; i < len; i++) {
-            temp[i] = inputs[i] * MULTIPLIER;
-        }
-
-        for (uint i = 0; i < len; i++) {
-            numbers.push(temp[i]);
+            uint256 result = inputs[i] * MULTIPLIER;  // ✅ 使用constant
+            numbers.push(result);
         }
     }
     
