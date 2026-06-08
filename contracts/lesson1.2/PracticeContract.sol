@@ -8,6 +8,10 @@ contract PracticeContract {
     address public immutable ADMIN;
     uint256 public constant MULTIPLIER = 2;
     
+    constructor(){
+        ADMIN = msg.sender;
+    }
+
     function batchProcess(
         uint256[] calldata inputs
     ) external {
