@@ -69,7 +69,7 @@ contract VotingSystem {
         // 找出票数最多的
 
         uint maxVotes = 0;
-        
+        uint winningProposalId = 0;
         for (uint i = 0; i < proposalCount; i++) {
             if (proposals[i].voteCount > maxVotes) {
                 maxVotes = proposals[i].voteCount;
