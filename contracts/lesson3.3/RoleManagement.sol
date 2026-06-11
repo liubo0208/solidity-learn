@@ -22,7 +22,7 @@ contract RoleManagement {
     // 定义modifier
     modifier onlyOwner() {
         // 检查是否为Owner
-        require(roles[msg.sender] == Role.Owner , "Only owner can call")
+        require(roles[msg.sender] == Role.Owner , "Only owner can call");
         _;
     }
     
