@@ -4,7 +4,7 @@ pragma solidity ^0.8.0;
 
 contract TypeConversionPractice {
 
-    function safeConverToUint8(uint256 calldata value) public pure returns(uint8){
+    function safeConverToUint8(uint256  value) public pure returns(uint8){
         require(value <= type(uint8).max,"Value too large for uint8");
         return uint8(value);
     }
@@ -23,8 +23,8 @@ contract TypeConversionPractice {
     // 额外测试函数
     function testConversion() public pure returns (uint8, uint8) {
         return (
-            safeConvertToUint8(255),  // 成功
-            safeConvertToUint8(100)   // 成功
+            safeConverToUint8(255),  // 成功
+            safeConverToUint8(100)   // 成功
             // safeConvertToUint8(256) // 会revert
         );
     }
