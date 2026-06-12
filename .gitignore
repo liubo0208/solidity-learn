@@ -2,3 +2,4 @@
 .vscode
 .states
 .deps
+node_modules
