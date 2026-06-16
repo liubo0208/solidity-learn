@@ -1,0 +1,3 @@
+[detectors]
+"reentrancy" = false
+"unsafe-erc20-call" = false
